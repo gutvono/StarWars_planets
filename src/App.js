@@ -1,9 +1,16 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Filters from './components/Filters';
+import Table from './components/Table';
 
 function App() {
   return (
-    <span>Hello, App!</span>
+    <section>
+      <Header />
+      <Filters />
+      <Table />
+    </section>
   );
 }
 
