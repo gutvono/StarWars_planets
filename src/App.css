@@ -2,8 +2,8 @@
 
 body {
   background: url('./images/wallpaperflare.com_wallpaper.jpg');
-  font-family: BIZ UDGothic , sans-serif;
   color: white;
+  font-family: BIZ UDGothic , sans-serif;
 }
 
 header {
@@ -13,19 +13,19 @@ header {
 }
 
 .demo {
-  border:1px solid #cccccc; 
-  border-collapse:collapse; 
-  width:100%; 
-  padding:5px; 
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  padding: 5px;
+  width: 100%;
 }
 
 .demo th {
-  border:1px solid #cccccc; 
-  background:#4a4a4a; 
-  padding:5px; 
+  background: #4a4a4a;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 .demo td {
-  border:1px solid #cccccc; 
-  padding:5px; 
+  border: 1px solid #ccc;
+  padding: 5px;
 }
