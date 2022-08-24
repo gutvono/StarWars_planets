@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap') ;
 
 body {
-  font-family: 'BIZ UDGothic', sans-serif;
   background: url('./images/wallpaperflare.com_wallpaper.jpg');
+  font-family: BIZ UDGothic , sans-serif;
   color: white;
 }
 
 header {
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .demo {
-  width:100%;
-  border:1px solid #CCCCCC;
-  border-collapse:collapse;
-  padding:5px;
+  border:1px solid #cccccc; 
+  border-collapse:collapse; 
+  width:100%; 
+  padding:5px; 
 }
+
 .demo th {
-  border:1px solid #CCCCCC;
-  padding:5px;
-  background:#4A4A4A;
+  border:1px solid #cccccc; 
+  background:#4a4a4a; 
+  padding:5px; 
 }
+
 .demo td {
-  border:1px solid #CCCCCC;
-  padding:5px;
+  border:1px solid #cccccc; 
+  padding:5px; 
 }
