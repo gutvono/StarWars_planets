@@ -1,10 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import App from '../App';
+import { renderWithContext } from './helpers/renderWithContext';
 
 describe('Testes do componente filters', () => {
   it('Testa se tem um input de texto', () => {
-    render(<App />);
+    renderWithContext(<App />);
     const input = screen.getByTestId(/name-filter/i)
     expect(input).toBeInTheDocument();
   });

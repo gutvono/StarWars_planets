@@ -2,21 +2,27 @@ import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
 
 function Table() {
-  const { filteredPlanets, numericFilters, setNumericFilters,
-    setFilters, filters } = useContext(AppContext);
+  const { filteredPlanets, numericFilters, setNumericFilters, setFilters, filters,
+    columns, setColumns } = useContext(AppContext);
 
-  const removeFilter = ({ target: { name } }) => {
+  const removeFilter = ({ target }) => {
     const newFilters = numericFilters
-      .filter((filter) => filter !== numericFilters[name]);
-
+      .filter((filter) => filter !== numericFilters[target.name]);
     setNumericFilters(newFilters);
+    setColumns([...columns, numericFilters[target.name].column]);
     setFilters({
       ...filters,
       filterByNumericValues: {
-        column: 'population',
+        column: columns[0],
         comparison: 'maior que',
         value: 0 },
     });
+  };
+
+  const removeAllFilters = () => {
+    setNumericFilters([]);
+    setColumns(['population', 'orbital_period',
+      'diameter', 'rotation_period', 'surface_water']);
   };
 
   return (
@@ -24,7 +30,7 @@ function Table() {
       <div>
         <p>Applied filters:</p>
         {numericFilters && numericFilters.map(({ column, comparison, value }, i) => (
-          <div key={ i }>
+          <div key={ i } data-testid="filter">
             <p>
               {column}
               ,
@@ -43,6 +49,13 @@ function Table() {
             </button>
           </div>
         ))}
+        <button
+          type="button"
+          onClick={ removeAllFilters }
+          data-testid="button-remove-filters"
+        >
+          Remove all filters
+        </button>
       </div>
       <table className="demo">
         <caption><h1>Star Wars Planets Table</h1></caption>

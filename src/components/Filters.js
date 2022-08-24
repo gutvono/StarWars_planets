@@ -3,7 +3,7 @@ import AppContext from '../context/AppContext';
 
 function Filters() {
   const { filters, filters: { filterByNumericValues }, setFilters, numericFilters,
-    setNumericFilters } = useContext(AppContext);
+    setNumericFilters, columns, setColumns } = useContext(AppContext);
 
   const handleChange = ({ target: { value } }) => {
     setFilters({
@@ -21,7 +21,17 @@ function Filters() {
   };
 
   const applyNumericFilters = () => {
+    console.log(filterByNumericValues);
     setNumericFilters([...numericFilters, filterByNumericValues]);
+    const newColumns = columns.filter((column) => !filterByNumericValues.column
+      .includes(column));
+    setFilters({
+      ...filters,
+      filterByNumericValues: { ...filterByNumericValues,
+        column: newColumns[0],
+      },
+    });
+    setColumns(newColumns);
   };
 
   return (
@@ -45,11 +55,9 @@ function Filters() {
           onChange={ handleNumericFilters }
           data-testid="column-filter"
         >
-          <option value="population">population</option>
-          <option value="orbital_period">orbital_period</option>
-          <option value="diameter">diameter</option>
-          <option value="rotation_period">rotation_period</option>
-          <option value="surface_water">surface_water</option>
+          {columns.map((column) => (
+            <option value={ column } key={ column }>{column}</option>
+          ))}
         </select>
       </label>
       <label htmlFor="comparison">

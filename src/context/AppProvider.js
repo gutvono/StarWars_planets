@@ -7,6 +7,8 @@ function AppProvider({ children }) {
   const [planets, setPlanets] = useState([]);
   const [filteredPlanets, setFilteredPlanets] = useState([]);
   const [numericFilters, setNumericFilters] = useState([]);
+  const [columns, setColumns] = useState(['population', 'orbital_period',
+    'diameter', 'rotation_period', 'surface_water']);
   const [filters, setFilters] = useState({
     filterByName: {
       name: '',
@@ -56,6 +58,8 @@ function AppProvider({ children }) {
         filteredPlanets,
         numericFilters,
         setNumericFilters,
+        columns,
+        setColumns,
       } }
     >
       {children}
