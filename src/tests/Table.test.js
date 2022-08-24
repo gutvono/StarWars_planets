@@ -41,30 +41,30 @@ describe('Testes do componente table', () => {
       json: () => Promise.resolve(fetchPlanets)
       })
       }
-    ); 
+    );
+
     renderWithContext(<App />)
-    // await waitFor(() => {
-    //   renderWithContext(<App />);
-    // })
 
-    // await act(async () => {
-    //   renderWithContext(<App />);
-    //   });
-    //   expect(global.fetch).toHaveBeenCalled();
-
-    
     const btn = await screen.findByRole('button', {
       name: /filtrar/i
     })
     expect(btn).toBeInTheDocument();
-    screen.logTestingPlaygroundURL();
-    // userEvent.click(btn);
-
+    
     expect(screen.getByRole('cell', {
       name: /tatooine/i
     })).toBeInTheDocument();
 
-    const planetsRendered = screen.findAllByTestId('table-planets');
-    // expect(planetsRendered).toHaveLength(9);
+    userEvent.click(btn);
+    const removeBtn = screen.getByRole('button', {
+      name: /x/i
+    });
+    userEvent.click(removeBtn);
+    screen.logTestingPlaygroundURL();
+
+    userEvent.click(btn);
+    const removeAllBtn = screen.getByRole('button', {
+      name: /remove all filters/i
+    })
+    userEvent.click(removeAllBtn);
   })
 });
