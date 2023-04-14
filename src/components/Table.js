@@ -27,7 +27,7 @@ function Table() {
 
   return (
     <section>
-      <div>
+      <div className="appliedFilters">
         <p>Applied filters:</p>
         {numericFilters && numericFilters.map(({ column, comparison, value }, i) => (
           <div key={ i } data-testid="filter">

@@ -1,5 +1,5 @@
 const fetchPlanets = async () => {
-  const request = await fetch('https://swapi-trybe.herokuapp.com/api/planets/');
+  const request = await fetch('https://swapi.dev/api/planets/');
   const response = request.json();
   return response;
 };

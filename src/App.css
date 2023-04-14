@@ -12,6 +12,18 @@ header {
   width: 100%;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.appliedFilters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .demo {
   border: 1px solid #ccc;
   border-collapse: collapse;
