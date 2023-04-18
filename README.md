@@ -8,12 +8,18 @@
     <br>
     🤖 **Futuro potencial**: criar uma Star Wars Wiki. Minha ideia é puxar todos os dados da API para um back-end, utilizando um banco de dados MongoDB, com Python e raspagem de dados.
     <br>
-    ⚡ Para **iniciar** o projeto:
-    ```npm run start```
-    ⚡ Para rodar os **testes** unitários:
-    ```npm run test```
-    ⚡ Para ver a cobertura total dos arquivos pelos **testes** em porcentagem:
-    ```npm run test-coverage```
+    ⚡ Para **iniciar** o projeto: <br/>
+    ```
+    npm run start
+    ```
+    ⚡ Para rodar os **testes** unitários:<br/>
+    ```
+    npm run test
+    ```
+    ⚡ Para ver a cobertura total dos arquivos pelos **testes** em porcentagem: <br/>
+    ```
+    npm run test-coverage
+    ```
 </p>
 
 <br>
@@ -29,12 +35,18 @@
     <br>
     🤖 **Future potential**: to create a Star Wars Wiki. My idea is to pull all the data from the API to a backend, using a MongoDB database, with Python and data scraping.
     <br>
-    ⚡ To **start** the project:
-    ```npm run start```
-    ⚡ To run unit **tests**:
-    ```npm run test```
-    ⚡ To view the total file coverage by **tests** in percentage:
-    ```npm run test-coverage```
+    ⚡ To **start** the project: <br/>
+    ```
+    npm run start
+    ```
+    ⚡ To run unit **tests**: <br/>
+    ```
+    npm run test
+    ```
+    ⚡ To view the total file coverage by **tests** in percentage: <br/>
+    ```
+    npm run test-coverage
+    ```
 </p>
 
 <img alt="grogu-drinking-coffee" src="https://media.tenor.com/4COAupmwhmUAAAAd/baby-yoda.gif">
