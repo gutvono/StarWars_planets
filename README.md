@@ -9,17 +9,11 @@
     🤖 <strong>Futuro potencial</strong>: criar uma Star Wars Wiki. Minha ideia é puxar todos os dados da API para um back-end, utilizando um banco de dados MongoDB, com Python e raspagem de dados.
     <br />
     ⚡ Para <strong>iniciar</strong> o projeto: <br />
-    ```bash
-    npm run start
-    ```
+    npm run start <br />
     ⚡ Para rodar os <strong>testes</strong> unitários:<br />
-    ```bash
-    npm run test
-    ```
+    npm run test <br />
     ⚡ Para ver a cobertura total dos arquivos pelos <strong>testes</strong> em porcentagem: <br />
-    
-    npm run test-coverage
-    ```
+    npm run test-coverage <br />
 </p>
 
 <br />
@@ -36,17 +30,11 @@
     🤖 <strong>Future potential</strong>: to create a Star Wars Wiki. My idea is to pull all the data from the API to a backend, using a MongoDB database, with Python and data scraping.
     <br />
     ⚡ To <strong>start</strong> the project: <br />
-    ```bash
-    npm run start
-    ```
+    npm run start <br />
     ⚡ To run unit <strong>tests</strong>: <br />
-    ```bash
-    npm run test
-    ```
+    npm run test <br />
     ⚡ To view the total file coverage by <strong>tests</strong> in percentage: <br />
-    ```bash
-    npm run test-coverage
-    ```
+    npm run test-coverage <br />
 </p>
 
 <img alt="grogu-drinking-coffee" src="https://media.tenor.com/4COAupmwhmUAAAAd/baby-yoda.gif">
