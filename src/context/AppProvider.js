@@ -21,7 +21,7 @@ function AppProvider({ children }) {
 
   useEffect(() => setFilteredPlanets(planets
     .filter((planet) => planet
-      .name.includes(filters.filterByName.name))), [filters.filterByName.name]);
+      .name.includes(filters.filterByName.name))), [filters.filterByName.name, planets]);
 
   const getPlanets = async () => {
     const planetsCall = await fetchPlanets();
@@ -48,7 +48,7 @@ function AppProvider({ children }) {
       return acc;
     }, planets);
     setFilteredPlanets(filtersToApply);
-  }, [numericFilters]);
+  }, [numericFilters, planets]);
 
   return (
     <AppContext.Provider
